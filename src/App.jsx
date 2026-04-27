@@ -26,7 +26,7 @@ export default function App() {
     const houseId = "h1-0000-0000-0000-000000000001"; 
     const userId = "u1-0000-0000-0000-000000000001";
 
-    axios.get(`n-b-bang-backend-i2eicyfwk-sdh240418-7676s-projects.vercel.app/api/v1/houses/${houseId}/dashboard`, {
+    axios.get(`https://n-b-bang-backend.vercel.app//api/v1/houses/${houseId}/dashboard`, {
       params: { userId: userId }
     })
     .then(res => {
@@ -203,7 +203,7 @@ function AddExpenseModal({ onClose }) {
     try {
       const houseId = "h1-0000-0000-0000-000000000001";
       // 백엔드로 실제 전송
-      await axios.post(`http://localhost:8080/api/v1/houses/${houseId}/expenses`, {
+      await axios.post(`https://n-b-bang-backend.vercel.app//api/v1/houses/${houseId}/expenses`, {
         title: title,
         amount: Number(amount),
         userId: "u1-0000-0000-0000-000000000001"
